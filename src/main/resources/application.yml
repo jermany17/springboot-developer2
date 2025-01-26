@@ -5,10 +5,14 @@ spring:
       hibernate:
         format_sql: true
     defer-datasource-initialization: true
-
+    hibernate:
+      ddl-auto: update # 스키마 자동 생성 설정
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:mysql://127.0.0.1:3306/mydb # MySQL URL
+    username: root # MySQL 사용자 이름
+    password: 1234 # MySQL 비밀번호
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   h2:
     console:
-      enabled: true
+      enabled: false

@@ -26,7 +26,6 @@ public class BlogApiController {
                 .body(savedArticle);
     }
 
-
     @GetMapping("/api/articles")
     public ResponseEntity<List<ArticleResponse>> findAllArticles() {
         List<ArticleResponse> articles = blogService.findAll()
